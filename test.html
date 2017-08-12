@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>testing</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		
+		<p>The time in Los Angeles is <span id="LATime">slow</span>.</p>
+		<p>It is <span id="DCTime">raining</span> in Washington DC.</p>
+		
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="remoteTime.js"></script>
+		<script>
+			$("#LATime").remoteTime({
+				key: "AIzaSyBNqBl2R6u8pONv3CWyXev-otesQf-1Ypo",
+				location: "Los Angeles, California",
+				format: "m/d/y g:i:s a"
+			});
+			
+			$("#DCTime").remoteTime({
+				key: "AIzaSyBNqBl2R6u8pONv3CWyXev-otesQf-1Ypo",
+				location: "washington dc",
+				format: "l, F j g:i A"
+			});
+		</script>
+	</body>
+</html>
+
+

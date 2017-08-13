@@ -63,7 +63,7 @@
 		function formatDate(date, format) {
 			if (isNaN(date.getTime())) return "Invalid Date";
 			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-			var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+			var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 			var buffer = []; 
 			for(var i=0; i<format.length; i++){

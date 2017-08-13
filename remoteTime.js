@@ -94,7 +94,21 @@
 					case "D": buffer.push(days[date.getUTCDay()].substr(0, 3)); break;
 					case "F": buffer.push(months[date.getUTCMonth()]); break;
 					case "M": buffer.push(months[date.getUTCMonth()].substring(0, 3)); break;
+					
+					// Ordinal suffix
+					case "S":
+						var suffix = false;
+						var ones = buffer[buffer.length-1];
+						var tens = buffer[buffer.length-2];
+						if(ones == "1") suffix = "st";
+						if(ones == "2") suffix = "nd";
+						if(ones == "3") suffix = "rd";
+						if(tens == "1" || !suffix) suffix = "th";
+						buffer.push(suffix);
+						break;
+
 					default: buffer.push(format[i]); break;
+						
 				}
 			}
 			return buffer.join('');

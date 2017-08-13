@@ -28,6 +28,7 @@ The following characters are recognized in the format parameter string:
 | *D* | A textual representation of a day, three letters  | Mon through Sun |
 | *j* | Day of the month without leading zeros | 1 to 31 |
 | *l* (lowercase 'L') | A full textual representation of the day of the week | Sunday through Saturday |
+| *S* | English ordinal suffix for the day of the month, 2 characters | st, nd, rd or th. Works well with j |
 | *w*  | Numeric representation of the day of the week | 0 (for Sunday) through 6 (for Saturday) |
 | **Month** | **--** | **--** |
 | *F* | A full textual representation of a month, such as January or March | January through December |
